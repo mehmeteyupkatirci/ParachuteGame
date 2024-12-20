@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    public GameObject obstaclePrefab;
+    public GameObject[] obstaclePrefabs; // Farklı engellerin listesi
     public float spawnRate = 2f;
     public float minimumSpawnRate = 0.5f; // En düşük doğma hızı
     public float difficultyIncreaseRate = 0.1f; // Doğma hızı artış oranı
@@ -15,9 +15,12 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnObstacle()
     {
+        int randomIndex = Random.Range(0, obstaclePrefabs.Length);
+        GameObject selectedObstacle = obstaclePrefabs[randomIndex];
+
         float randomX = Random.Range(-8f, 8f);
         Vector2 spawnPosition = new Vector2(randomX, 6f);
-        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+        Instantiate(selectedObstacle, spawnPosition, Quaternion.identity);
     }
 
     void IncreaseDifficulty()
