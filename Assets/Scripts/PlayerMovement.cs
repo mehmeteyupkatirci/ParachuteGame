@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Oyun Bitti!");
             Time.timeScale = 0; // Oyunu durdur
             gameOverText.SetActive(true); // Mesajı göster
+            FindObjectOfType<ScoreManager>().GameOver(); // Puanlamayı durdur
         }
     }
 }
