@@ -13,6 +13,12 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 movement = new Vector2(horizontal, vertical) * speed * Time.deltaTime;
         transform.Translate(movement);
+
+        // Yeniden başlatma tuşunu kontrol et
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            FindObjectOfType<GameManager>().RestartGame();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
