@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4419784267112862924}
   - component: {fileID: 8147570908770256762}
   - component: {fileID: 1825141607760925085}
-  - component: {fileID: 3545949324908532070}
   m_Layer: 0
   m_Name: Obstacle_Moving
   m_TagString: Obstacle
@@ -144,37 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b97a762d9218249917c7e3a074899f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  difficultyIncreaseRate: 0.1
   isRotating: 0
   rotationSpeed: 100
   isMovingHorizontally: 1
   horizontalSpeed: 2
   horizontalRange: 3
---- !u!50 &3545949324908532070
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463630629169876125}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 445889251}
   - component: {fileID: 445889253}
   - component: {fileID: 445889254}
+  - component: {fileID: 445889255}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -385,9 +386,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 436f30ea467ce7d45bed9f70000aede2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 463630629169876125, guid: 7a694cbd8d2fd204583a386d092db0b7, type: 3}
-  spawnRate: 2
-  spawnHeight: 5
+  obstaclePrefabs:
+  - {fileID: 463630629169876125, guid: 7a694cbd8d2fd204583a386d092db0b7, type: 3}
+  - {fileID: 463630629169876125, guid: fc676ff3847062245a569b9473d310d9, type: 3}
+  - {fileID: 463630629169876125, guid: 8d777f74362ba364696fc46be8fa1f7d, type: 3}
 --- !u!4 &445889252
 Transform:
   m_ObjectHideFlags: 0
@@ -430,6 +432,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc199938bdf37f145a03795958d371f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &445889255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445889250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f20644df7bdd247b26362f72a6e32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 2
+  fallSpeedIncreaseRate: 0.1
+  spawnRate: 2
+  minimumSpawnRate: 0.5
+  spawnRateIncreaseRate: 0.1
+  difficultyIncreaseInterval: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1174525652
 RectTransform:
   m_ObjectHideFlags: 0
