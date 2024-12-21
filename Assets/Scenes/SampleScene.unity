@@ -444,9 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f20644df7bdd247b26362f72a6e32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
+  fallSpeed: 3
   fallSpeedIncreaseRate: 0.1
-  spawnRate: 2
+  spawnRate: 1.5
   minimumSpawnRate: 0.5
   spawnRateIncreaseRate: 0.1
   difficultyIncreaseInterval: 10
